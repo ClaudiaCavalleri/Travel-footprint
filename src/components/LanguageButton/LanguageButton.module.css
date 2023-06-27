@@ -18,7 +18,7 @@
     text-align: left;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 760px) {
     .langInput {
         margin: 0 10px;
     }

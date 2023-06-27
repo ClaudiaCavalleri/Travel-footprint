@@ -61,11 +61,10 @@ button {
   flex-grow: 2;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 760px) {
 
   .searchForm {
-    width: 100vw;
-    padding: 10px;
+    width: auto;
   }
 
   input,
@@ -79,5 +78,4 @@ button {
     flex-direction: column;
     align-items: center;
   }
-  
 }

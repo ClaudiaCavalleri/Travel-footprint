@@ -1,7 +1,6 @@
 export const translation = {
     english: {
-        title: "Travel Footprint",
-        subheading: "The emissions of CO2 of a flight",    
+        title: "Travel Footprint",   
         description1: "The best thing for the climate is to keep flights to a minimum and to choose less carbon exhaustive options to get around.",
         description2: "However, when staying on the ground is not an option, you can calculate the emissions from travelling to be aware of the amount of CO2 it produces.",
         description3: "You can enter 4 types of parameters: departure, destination, number of travel mates, and selected class, to obtain an accurate final calculation.",
@@ -23,9 +22,7 @@ export const translation = {
         WebSite: "Web Site",
         How: "How does calculation works?",
     },
-    italian: {
-        title: "L'Impronta ecologica",
-        subheading: "del tuo viaggio aereo come emissioni di CO2",        
+    italian: {       
         description1: "La cosa migliore per il clima è ridurre al minimo i voli e scegliere trasporti meno inquinanti in termini di emissioni di carbonio.", 
         description2: "Comunque, se stare con i piedi per terra non è un'opzione, puoi calcolare le emissioni di ogni viaggio aereo per essere consapevole della quantità di CO2 prodotta.",
         description3: "Puoi inserire 4 tipi di parametri: partenza, destinazione, numero di compagni di viaggio e classe selezionata per avere un calcolo finale accurato.",
