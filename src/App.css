@@ -33,5 +33,13 @@ li {
   text-align: center;
 }
 
+@media only screen and (max-width: 800px) {
+
+  .App {
+    background: none;
+  }
+  
+}
+
 
 
