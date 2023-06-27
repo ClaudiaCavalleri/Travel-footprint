@@ -9,9 +9,8 @@ export const useFetchFootprint = () => {
     const [footprint, setFootprint] = useState(null);
     const [totalFootprint, setTotalFootprint] = useState(null);
 
-    
+    // eslint-disable-next-line
     useEffect(() => {
-        
         const footprintURL = `https://api.goclimate.com/v1/flight_footprint?segments[0][origin]=${airportCode.origin}&segments[0][destination]=${airportCode.destination}&cabin_class=${searchQuery.classes}&&currencies[]=EUR`; 
         
         const requestFootprint = async () => {
@@ -26,7 +25,7 @@ export const useFetchFootprint = () => {
             } catch (error) {
                 console.log(error)
                 console.log(error.response.status)
-                
+
                 if (error.response.status !== 404) {
                     // Request made but the server responded with an error
                     dispatch({ type: "HIDE_RESULTS" });
@@ -44,7 +43,8 @@ export const useFetchFootprint = () => {
         } 
         requestFootprint();
 
-    }, [state.airportCode]);
+        // eslint-disable-next-line 
+    }, [airportCode.origin, airportCode.destination]);
 
     return { footprint, totalFootprint };
 };

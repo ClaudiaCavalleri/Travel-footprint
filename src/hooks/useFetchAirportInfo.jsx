@@ -16,6 +16,7 @@ export const useFetchAirportInfo = (isFromInput) => {
 
     const airportURL = "https://gist.githubusercontent.com/tdreyno/4278655/raw/7b0762c09b519f40397e4c3e100b097d861f5588/airports.json"
 
+    
     useEffect(() => {
         const fetchAirportInfo = async () => {
             let response = await axios.get(airportURL);
@@ -28,7 +29,7 @@ export const useFetchAirportInfo = (isFromInput) => {
             setAirportInfoLoaded(false);
             fetchAirportInfo();
         }
-    }, [query])
+    }, [query, capitalizedQuery, isDropdownShowing])
 
     return { airportInfo, airportInfoLoaded };
 }

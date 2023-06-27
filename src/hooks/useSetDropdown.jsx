@@ -35,6 +35,7 @@ export const useSetDropdown = (isFrom) => {
       window.removeEventListener("resize", setPosition);
       window.removeEventListener("scroll", setPosition);
     }
+    // eslint-disable-next-line 
   }, [isFrom]);
 
   // Dropdown style
@@ -58,7 +59,8 @@ export const useSetDropdown = (isFrom) => {
     }
 
     return () => document.removeEventListener("click", hideDropdown);
-  }, [showDropdown]);
+    // eslint-disable-next-line 
+  }, []);
 
   return { styleDropdown };
 };
