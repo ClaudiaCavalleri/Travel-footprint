@@ -26,12 +26,9 @@ export const useFetchFootprint = () => {
                 console.log(error)
                 console.log(error.response.status)
 
-                if (error.response.status !== 404) {
+                if (error.response) {
                     // Request made but the server responded with an error
                     dispatch({ type: "HIDE_RESULTS" });
-                } else if (error.response.status === 404) {
-                    dispatch({ type: "HIDE_RESULTS" });
-                    alert("No matching. Try a new search")
                 } else if (error.request) {
                     // Request made but no response is received from the server.
                     dispatch({ type: "HIDE_RESULTS" });

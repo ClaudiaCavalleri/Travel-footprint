@@ -36,6 +36,7 @@
     .footer__climateInfo,
     .footer__about {
         width: 100%;
+        padding: 0;
     }
 
     .footer__logo > h2 {
