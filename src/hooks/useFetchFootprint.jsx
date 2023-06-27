@@ -41,7 +41,7 @@ export const useFetchFootprint = () => {
         } 
         requestFootprint();
 
-        
+       // eslint-disable-next-line 
     }, [airportCode, searchQuery]);
 
     return { footprint, totalFootprint };
