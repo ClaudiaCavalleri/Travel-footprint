@@ -9,7 +9,6 @@ import { useSelectAirport } from './hooks/useSelectAirport';
 import { useSearchFlight } from './hooks/useSearchFlight';
 import { useSetDropdown } from './hooks/useSetDropdown';
 import { useNewSearch } from './hooks/useNewSearch';
-
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import SearchForm from './components/SearchForm/SearchForm';
@@ -25,6 +24,7 @@ export default function App() {
   const { updateInputs } = useUpdateInputs();
   const { airportInfo, airportInfoLoaded } = useFetchAirportInfo(isFrom);
   const { selectAirport } = useSelectAirport();
+
   const { searchFlight } = useSearchFlight(resultsBox);
   const { styleDropdown } = useSetDropdown(isFrom);
   const { footprint, totalFootprint } = useFetchFootprint();

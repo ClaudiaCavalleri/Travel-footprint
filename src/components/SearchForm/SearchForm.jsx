@@ -56,7 +56,7 @@ export default function SearchForm ({
                         />
                     )}
                 </div>
-                
+     
                 <div>
                     <NumberInput 
                         handleChange={updateInputs}

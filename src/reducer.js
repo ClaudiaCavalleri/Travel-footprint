@@ -76,11 +76,7 @@ const reducer = (state, action) => {
                     origin: state.searchQuery.from.slice(0, 3),
                     destination: state.searchQuery.to.slice(0, 3)
                 },
-                previousQuery: {
-                    ...state.searchQuery
-                },
                 showResults: true,
-                
             }
         
         case "RESET": 
@@ -107,8 +103,8 @@ const reducer = (state, action) => {
                 },
                 airportCode: {
                     ...state.airportCode,
-                    origin: null,
-                    destination: null
+                    origin: "",
+                    destination: ""
                 },
                 showResults: false
             }

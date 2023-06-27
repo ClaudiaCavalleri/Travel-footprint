@@ -8,6 +8,7 @@ export const useFetchFootprint = () => {
 
     const [footprint, setFootprint] = useState(null);
     const [totalFootprint, setTotalFootprint] = useState(null);
+    //const [footrpintLoaded, setFootprintLoaded] = useState(false)
 
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export const useFetchFootprint = () => {
                 console.log(error)
                 console.log(error.response.status)
 
-                if (error.response) {
+                if (error.response.status !== 404) {
                     // Request made but the server responded with an error
                     dispatch({ type: "HIDE_RESULTS" });
                 } else if (error.request) {
@@ -40,8 +41,8 @@ export const useFetchFootprint = () => {
         } 
         requestFootprint();
 
-        // eslint-disable-next-line 
-    }, [airportCode.origin, airportCode.destination]);
+        
+    }, [airportCode, searchQuery]);
 
     return { footprint, totalFootprint };
 };

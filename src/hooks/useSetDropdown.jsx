@@ -60,7 +60,7 @@ export const useSetDropdown = (isFrom) => {
 
     return () => document.removeEventListener("click", hideDropdown);
     // eslint-disable-next-line 
-  }, []);
+  }, [showDropdown]);
 
   return { styleDropdown };
 };
