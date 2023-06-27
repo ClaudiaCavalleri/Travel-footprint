@@ -9,7 +9,7 @@ export const useFetchFootprint = () => {
     const [footprint, setFootprint] = useState(null);
     const [totalFootprint, setTotalFootprint] = useState(null);
 
-    // eslint-disable-next-line
+
     useEffect(() => {
         const footprintURL = `https://api.goclimate.com/v1/flight_footprint?segments[0][origin]=${airportCode.origin}&segments[0][destination]=${airportCode.destination}&cabin_class=${searchQuery.classes}&&currencies[]=EUR`; 
         

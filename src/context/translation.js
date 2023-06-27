@@ -36,7 +36,7 @@ export const translation = {
         placeholderPass: "Inserisci il numero dei tuoi compagni di viaggio",
         passengers: "Passeggeri",
         class: "Classe",
-        showFootprint: "Calcola",
+        showFootprint: "Calcola Footprint",
         totalFootprint: "Footrpint totale",
         footprintPerPassenger: "Footprint per passeggero",
         departureAirport: "Aeroporto di partenza",
