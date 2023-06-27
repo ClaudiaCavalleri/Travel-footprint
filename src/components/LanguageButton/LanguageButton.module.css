@@ -1,0 +1,19 @@
+.select__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+
+.langInput {
+    width: 150px;
+    height: 30px;
+    margin: 0 30px;
+    border-radius: 2px;
+    border: none;
+    color: #4C3470;
+    font-size: 1rem;
+    text-align: left;
+}

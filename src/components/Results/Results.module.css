@@ -1,0 +1,54 @@
+.results__container {
+    margin: 50px 0;
+    padding: 50px;
+    width: 800px;
+    background-color: #4C3470;
+    color: #CBC3DC;
+}
+
+.summary {
+    margin: 50px auto;
+    width: 600px;
+    padding: 20px;
+    background-color: #CBC3DC;
+    color: #4C3470;
+}
+
+.results {
+    margin: 30px 0;
+}
+
+.totalFootprint {
+    border-bottom:1px solid #F5C25C;
+}
+
+span {
+    font-size: 2rem;
+    color: #F5C25C;
+}
+
+#newSearchButton {
+    margin: 20px;
+}
+
+@media only screen and (max-width: 800px) { 
+    
+    .results__container {
+        width: 420px;
+        padding: 10px;
+    }
+
+    .summary {
+        margin: 20px auto;
+        width: 250px;
+    }
+
+    .summary > h4 {
+        margin: 5px;
+    }
+
+    .summary > ul {
+        padding: 0;
+    }
+
+}

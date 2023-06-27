@@ -1,0 +1,24 @@
+.hero {
+    width: 900px;
+    margin: 20px auto;
+    text-align: left;
+}
+  
+.title,
+.description {
+    padding: 20px 0;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px) ;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .heroContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero {
+      width: 440px;
+    }
+}
