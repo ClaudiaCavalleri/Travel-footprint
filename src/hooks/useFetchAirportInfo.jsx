@@ -24,13 +24,14 @@ export const useFetchAirportInfo = (isFromInput) => {
 
             const filterByCity = response.data.filter((el) => el.city.startsWith(capitalizedQuery));
             const filterByCountry = response.data.filter((el) => el.country.startsWith(capitalizedQuery));
+            let filteredResponse;
 
             setAirportInfo(
-                filterByCity <= 1 ? filterByCountry : filterByCity
+                filteredResponse = filterByCity.concat(filterByCountry)
             );
 
             setAirportInfoLoaded(true)
-            console.log(response.data)
+            console.log(filteredResponse)
         } 
         if (isDropdownShowing) {
             setAirportInfoLoaded(false);
