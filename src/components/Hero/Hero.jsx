@@ -9,7 +9,7 @@ export default function Hero () {
         <article className={style.hero__container}>
             <div className={style.hero}>
                 <div className={style.title}>
-                    <h1>Travel Footprint</h1>
+                    <h1>{t("title")}</h1>
                 </div>
                 <div className={style.description}>
                     <p>{t("description1")}</p>
