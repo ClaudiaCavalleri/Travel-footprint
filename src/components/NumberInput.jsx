@@ -1,25 +1,23 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { LanguageContext } from "../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 import style from "./SearchForm/SearchForm.module.css"
 import { FaUserFriends } from "react-icons/fa";
 
 const NumberInput = ({ handleChange }) => {
     const { state } = useContext(AppContext);
     const { searchQuery } = state;
-
-    const { translation, language } = useContext(LanguageContext);
-    const { english, italian } = translation;
+    const { t } = useTranslation();
 
     return (
         <div>
             <label>
-                <h3>{`${language === "english" ? english.passengers : italian.passengers}`}</h3>
+                <h3>{t("passengers")}</h3>
                 <div className={style.inputRow}>
                     <FaUserFriends size={30} className={style.icon}/>
                     <input
                         type="number"
-                        placeholder={`${language === "english" ? english.placeholderPass : italian.placeholderPass}`}
+                        placeholder={t("placeholderPass")}
                         name="Passengers"
                         min={1}
                         value={searchQuery.passengers}

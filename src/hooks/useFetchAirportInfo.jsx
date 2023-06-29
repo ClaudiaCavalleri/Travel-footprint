@@ -18,12 +18,19 @@ export const useFetchAirportInfo = (isFromInput) => {
 
     
     useEffect(() => {
+        
         const fetchAirportInfo = async () => {
-            let response = await axios.get(airportURL);
+            const response = await axios.get(airportURL);
+
+            const filterByCity = response.data.filter((el) => el.city.startsWith(capitalizedQuery));
+            const filterByCountry = response.data.filter((el) => el.country.startsWith(capitalizedQuery));
+
             setAirportInfo(
-                response.data.filter((el) => el.city.startsWith(capitalizedQuery))
+                filterByCity <= 1 ? filterByCountry : filterByCity
             );
+
             setAirportInfoLoaded(true)
+            console.log(response.data)
         } 
         if (isDropdownShowing) {
             setAirportInfoLoaded(false);

@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import React from "react";
 import style from "./Hero.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function Hero () {
-    const { translation, language } = useContext(LanguageContext);
-    const { english, italian } = translation;
+    const { t } = useTranslation();
 
     return(
         <article className={style.hero__container}>
@@ -13,9 +12,9 @@ export default function Hero () {
                     <h1>Travel Footprint</h1>
                 </div>
                 <div className={style.description}>
-                    <p>{`${language === "english" ? english.description1 : italian.description1}`}</p>
-                    <p>{`${language === "english" ? english.description2 : italian.description2}`}</p>
-                    <p>{`${language === "english" ? english.description3 : italian.description3}`}</p>
+                    <p>{t("description1")}</p>
+                    <p>{t("description2")}</p>
+                    <p>{t("description3")}</p>
                 </div>
             </div>
         </article>

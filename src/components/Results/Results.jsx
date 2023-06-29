@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import style from "./Results.module.css";
 import { AppContext } from '../../context/AppContext';
-import { LanguageContext } from "../../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 
 export default function Results ({
@@ -11,35 +11,34 @@ export default function Results ({
 }) {
     const { state } = useContext(AppContext);
     const { searchQuery } = state;
-    const { translation, language } = useContext(LanguageContext);
-    const { english, italian } = translation;
+    const { t } = useTranslation();
 
     return (
         <section className={style.results__container}>
             <div className={style.results}>
                 <div className={style.footprintPerPassenger}>
-                    <h2>{`${language === "english" ? english.footprintPerPassenger : italian.footprintPerPassenger}`}</h2>
-                    <h4><span>{footprint}</span> Kg {`${language === "english" ? english.of : italian.of}`} CO<sub>2</sub></h4>
-                    <p>* {searchQuery.passengers} {`${language === "english" ? english.passengers : italian.passengers}`} =</p>
+                    <h2>{t("footprintPerPassenger")}</h2>
+                    <h4><span>{footprint}</span> Kg {t("of")} CO<sub>2</sub></h4>
+                    <p>* {searchQuery.passengers} {t("passengers")} =</p>
                 </div>
                 <div className={style.totalFootprint}>
-                    <h2>{`${language === "english" ? english.totalFootprint : italian.totalFootprint}`}</h2>
-                    <h3><span>{totalFootprint}</span> Kg {`${language === "english" ? english.of : italian.of}`} CO<sub>2</sub></h3>
+                    <h2>{t("totalFootprint")}</h2>
+                    <h3><span>{totalFootprint}</span> Kg {t("of")} CO<sub>2</sub></h3>
                 </div>
             </div>
             <div className={style.summary}>
-                <h4>{`${language === "english" ? english.summary : italian.summary}`}</h4>
+                <h4>{t("summary")}</h4>
                 <ul>
-                    <li>{`${language === "english" ? english.departureAirport : italian.departureAirport}`}: {searchQuery.from.slice(6)},</li>
-                    <li>{`${language === "english" ? english.arrivalAirport : italian.arrivalAirport}`}: {searchQuery.to.slice(6)},</li>
-                    <li>{`${language === "english" ? english.class : italian.class}`}: {searchQuery.classes === "premium_economy" ? "Premium Economy" : searchQuery.classes[0].toUpperCase() + searchQuery.classes.slice(1)}.</li>
+                    <li>{t("departureAirport")}: {searchQuery.from.slice(6)},</li>
+                    <li>{t("arrivalAirport")}: {searchQuery.to.slice(6)},</li>
+                    <li>{t("class")}: {searchQuery.classes === "premium_economy" ? "Premium Economy" : searchQuery.classes[0].toUpperCase() + searchQuery.classes.slice(1)}.</li>
                 </ul>
             </div>
             <button 
                 id={style.newSearchButton} 
                 onClick={newSearch}
             >
-                {`${language === "english" ? english.newSearch : italian.newSearch}`}
+                {t("newSearch")}
             </button>
         </section>
     )

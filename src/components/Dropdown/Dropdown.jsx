@@ -53,7 +53,7 @@ const Dropdown = ({
         {airportInfo.map((item) => {
             return (
             <li key={nanoid()} onClick={selectAirport}>
-                {item.code} - {item.name} ({item.city})
+                {item.code} - {item.name}, {item.city} ({item.country})
             </li>
             );
         })}

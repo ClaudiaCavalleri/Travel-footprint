@@ -1,23 +1,32 @@
-import { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import style from "./LanguageButton.module.css"
 
 export default function LanguageButton () {
-    const { language, toggleLanguage } = useContext(LanguageContext);
+    const { t, i18n } = useTranslation();
 
-    function handleLanguageChange(e) {
-        const selectedLanguage = e.target.value;
-        toggleLanguage(selectedLanguage);
-    }
-
+    const lngs = {
+        en: { nativeName: 'English' },
+        it: { nativeName: 'Italiano' }
+    };
+    
     return (
         <form>
             <div className={style.select__container}>
-                <h4>Select a language</h4>
-                <select value={language} onChange={handleLanguageChange} className={style.langInput}>
-                    <option value="english" onClick={toggleLanguage}>ENG</option>
-                    <option value="italian" onClick={toggleLanguage}>ITA</option>
-                </select>
+                <h4>{t("selectALanguage")}</h4>
+                <div>
+                    {Object.keys(lngs).map((lng) => (
+                        <button 
+                            type="submit" 
+                            className={style.langButton}
+                            key={lng} 
+                            style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} 
+                            onClick={() => i18n.changeLanguage(lng)}
+                        >
+                            {lngs[lng].nativeName}
+                        </button>
+                    ))}
+                </div>
             </div>
         </form>
     );

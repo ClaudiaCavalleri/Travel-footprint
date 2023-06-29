@@ -5,7 +5,15 @@
     align-items: center;
 }
 
-
+.langButton {
+    width: auto;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    color: #F5C25C;
+    font-size: 0.7rem;
+    text-align: center;
+}
 
 .langInput {
     width: 100px;
@@ -19,7 +27,8 @@
 }
 
 @media only screen and (max-width: 760px) {
-    .langInput {
-        margin: 0 10px;
+    .langButton {
+        padding: 5px 10px;
+        margin: 0 2px;
     }
 }

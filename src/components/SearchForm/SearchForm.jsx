@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { LanguageContext } from "../../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 import style from "./SearchForm.module.css";
 
 import TextInput from '../TextInput';
@@ -19,9 +19,7 @@ export default function SearchForm ({
 
     const { state } = useContext(AppContext);
     const { searchQuery, showDropdown } = state;
-    
-    const { translation, language } = useContext(LanguageContext);
-    const { english, italian } = translation;
+    const { t } = useTranslation();
     
     
 
@@ -73,7 +71,7 @@ export default function SearchForm ({
                         id={style.showFootprintButton} 
                         onClick={searchFlight}
                     >
-                        {`${language === "english" ? english.showFootprint : italian.showFootprint}`}
+                        {t("showFootprint")}
                     </button>
                 </div>
             </form>
