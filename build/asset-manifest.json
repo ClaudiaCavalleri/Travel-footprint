@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef26107e.css",
+    "main.css": "/static/css/main.547864c4.css",
     "main.js": "/static/js/main.0b6525f8.js",
     "static/media/paperplane.png": "/static/media/paperplane.2230e0326616ed6be99b.png",
     "static/media/paper-plane-icon.png": "/static/media/paper-plane-icon.8fca7f141e0f8479e6a6.png",
     "index.html": "/index.html",
-    "main.ef26107e.css.map": "/static/css/main.ef26107e.css.map",
+    "main.547864c4.css.map": "/static/css/main.547864c4.css.map",
     "main.0b6525f8.js.map": "/static/js/main.0b6525f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef26107e.css",
+    "static/css/main.547864c4.css",
     "static/js/main.0b6525f8.js"
   ]
 }
