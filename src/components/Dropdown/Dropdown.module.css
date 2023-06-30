@@ -4,7 +4,7 @@
     justify-content: center;
     font-size: 1rem;
     background-color: #F5C25C;
-    max-height: 80px;
+    max-height: 200px;
     border-radius: 0 0 4px 4px;
     padding: 10px 7px;
     margin: 0;
@@ -15,7 +15,7 @@
 }
   
 .dropdown > li {
-    padding: 2px 0;
+    padding: 10px 0;
 }
 
 .dots {
@@ -25,6 +25,6 @@
   
 /* Add border bottom and margin to every list item except last one */
 .dropdown > li:not(li:last-of-type) {
-    border-bottom: 1px solid #cfcece;
+    border-bottom: 1px solid #7B6798;
     margin-bottom: 2px;
 }
