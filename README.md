@@ -25,8 +25,15 @@
   <li>Display of the calculated carbon footprint value</li>
 </ul>
 
-# Technologies used
-<p>The app integrates the following APIs:</p>
+# Technologies and APIs
+<p>The project is built using the following technologies:</p>
+<ul>
+  <li>React.js</li>
+  <li>React-icons: a library of customizable icons for React applications</li>
+  <li>i18next: a powerful internationalization framework for multilingual support</li>
+</ul>
+
+<p>and integrates the following APIs:</p>
 <ul>
   <li><a href="https://gist.githubusercontent.com/tdreyno/4278655/" target="_blank">Airport Codes Database API</a>: Provides access to a comprehensive database of airport codes for accurate airport selection</li>
   <li><a href="https://api.goclimate.com/docs" target="_blank">GoClimate Carbon Footprint Calculation API</a>: Offers a function to calculate the carbon footprint of a trip based on specific parameters</li>
