@@ -16,7 +16,7 @@ export default function Footer () {
                 <p><a href="https://www.goclimate.com/blog/wp-content/uploads/2019/04/Calculations-in-GoClimateNeutral-Flight-Footprint-API.pdf" target="_blank" rel="noreferrer">{t("how")}</a></p>
             </div>
             <div className={style.footer__about}>
-                <p><a href="https://claudiacavalleri.github.io" target="_blank" rel="noreferrer">Portfolio</a></p>
+                <p><a href="https://claudiacavalleri.netlify.app" target="_blank" rel="noreferrer">Portfolio</a></p>
                 <p><a href="https://www.linkedin.com/in/claudiacavalleri/" target="_blank" rel="noreferrer">Linkedin</a></p>
             </div>
         </section>
